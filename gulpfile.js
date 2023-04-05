@@ -10,7 +10,7 @@ const webpackStream = require('webpack-stream');
 const concat = require('gulp-concat');
 const TerserPlugin = require('terser-webpack-plugin');
 const imagemin = require('gulp-imagemin');
-const changed = require('gulp-changed');
+// const changed = require('gulp-changed');
 const sourcemaps = require('gulp-sourcemaps');
 const fs = require('fs');
 
@@ -95,7 +95,7 @@ function scripts() {
 
 function images() {
     return src('source/images/*')
-        .pipe(changed('source/images'))
+        // .pipe(changed('source/images'))
         .pipe(imagemin([
             imagemin.svgo({
                 // plugins disabled to prevent svgo from empty svg sprite
