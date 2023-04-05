@@ -1,0 +1,7 @@
+mixin exercise(name, time, cals, img)
+    .exercise
+        .exercise__wrapper
+            img.exercise__img(src=img alt=name)
+            h3.exercise__name= name
+            .exercise__time= time
+        .exercise__calories= cals + ' est calories'

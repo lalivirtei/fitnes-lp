@@ -113,7 +113,7 @@ function images() {
 
 function watcher() {
     watch("**/*.scss", {usePolling: true}, styles);
-    watch("**/*.js", {usePolling: true}, scripts);
+    // watch("**/*.js", {usePolling: true}, scripts);
     watch("**/*.pug", {usePolling: true}, layout).on('change', bs.reload);
     watch("source/images/*", {usePolling: true}, images);
 }

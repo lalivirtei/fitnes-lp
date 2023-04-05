@@ -1,0 +1,5 @@
+mixin trainer(name, job, modifier, img)
+    div(class='trainer' + ' trainer--' + modifier)
+        img.trainer__picture(src=img alt=name)
+        .trainer__name= name
+        .trainer__job-title= job
