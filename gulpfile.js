@@ -24,7 +24,7 @@ function browserSync() {
 }
 
 function layout() {
-    return src(['index.pug'])
+    return src(['source/index.pug'])
         .pipe(pug())
         .pipe(dest('public'))
         .pipe(bs.stream())
@@ -32,7 +32,7 @@ function layout() {
 
 function styles() {
     // noinspection JSCheckFunctionSignatures
-    return src('main.scss')
+    return src('source/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(postCSS([
@@ -52,7 +52,7 @@ function styles() {
 }
 
 function scripts() {
-    return src('script.js')
+    return src('source/script.js')
         .pipe(sourcemaps.init())
         .pipe(webpackStream({
             mode: 'production',
@@ -94,8 +94,8 @@ function scripts() {
 }
 
 function images() {
-    return src('images/*')
-        .pipe(changed('src/images'))
+    return src('source/images/*')
+        .pipe(changed('source/images'))
         .pipe(imagemin([
             imagemin.svgo({
                 // plugins disabled to prevent svgo from empty svg sprite
@@ -114,19 +114,19 @@ function images() {
 function watcher() {
     watch("**/*.scss", {usePolling: true}, styles);
     watch("**/*.js", {usePolling: true}, scripts);
-    watch("src/img/*", {usePolling: true}, images);
     watch("**/*.pug", {usePolling: true}, layout).on('change', bs.reload);
+    watch("source/images/*", {usePolling: true}, images);
 }
 
 async function createBlocks() {
-    let blocks = fs.readFileSync('blocks.csv', 'utf-8').split(', ');
+    let blocks = fs.readFileSync('source/blocks.csv', 'utf-8').split(', ');
     blocks.forEach(el => {
-        if(!fs.existsSync('blocks/' + el)) {
-            fs.mkdirSync('blocks/' + el);
-            fs.open('blocks/' + el + '/index.pug', 'w', function() {});
-            fs.open('blocks/' + el + '/index.js', 'w', function() {});
-            fs.open('blocks/' + el + '/_index.scss', 'w', function() {});
-            fs.appendFile('blocks/_index.scss', '\n@import "' + el + '";', function() {});
+        if(!fs.existsSync('source/blocks/' + el)) {
+            fs.mkdirSync('source/blocks/' + el);
+            fs.open('source/blocks/' + el + '/index.pug', 'w', function() {});
+            fs.open('source/blocks/' + el + '/index.js', 'w', function() {});
+            fs.open('source/blocks/' + el + '/_index.scss', 'w', function() {});
+            fs.appendFile('source/blocks/_index.scss', '\n@import "' + el + '";', function() {});
         }
     })
 }
