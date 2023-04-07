@@ -1,3 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
 @import "node_modules/normalize.css/normalize";
+@import "vars";
 @import "blocks";
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey-100: #191919;
+  --yellow-100: #ffe642;
+  --yellow-200: #ffcd00;
+  --green-100: #25ab75;
+  --pink-100: #fb1351;
+}
+
+.body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--black);
+  color: var(--white);
+}

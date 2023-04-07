@@ -1,0 +1,20 @@
+.menu {
+  display: flex;
+
+  &__item {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.67;
+    text-decoration: none;
+
+    @media (min-width: $screen-sm) {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+  }
+}
