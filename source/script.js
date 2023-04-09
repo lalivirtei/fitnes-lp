@@ -1,0 +1,1 @@
+// import menu from 'blocks/menu/index';

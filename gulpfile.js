@@ -52,7 +52,7 @@ function styles() {
 }
 
 function scripts() {
-    return src('source/script.js')
+    return src(['source/script.js', 'source/blocks/*/index.js'])
         .pipe(sourcemaps.init())
         .pipe(webpackStream({
             mode: 'production',
