@@ -4,7 +4,7 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-    background: var(--grey-100);
+    background: var(--grey-200);
     border-radius: 200px;
     padding: 5px;
     font-weight: 400;
@@ -67,7 +67,7 @@
     flex-direction: column;
     padding: 20px 30px;
     border-radius: 20px;
-    background: var(--grey-100);
+    background: var(--grey-200);
 
     &:first-child {
       color: var(--yellow-100);

@@ -5,12 +5,35 @@
 :root {
   --black: #000;
   --white: #fff;
-  --grey-100: #191919;
-  --grey-200: #666;
+  --grey-100: #666;
+  --grey-200: #191919;
   --yellow-100: #ffe642;
   --yellow-200: #ffcd00;
   --green-100: #25ab75;
   --pink-100: #fb1351;
+}
+
+div, header, main, aside, a, span {
+  box-sizing: border-box;
+}
+
+.container {
+  @media (min-width: $screen-sm) {
+    width: $screen-sm;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $screen-md) {
+    width: $screen-md;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: $screen-lg;
+  }
+
+  @media (min-width: $screen-xl) {
+    width: $screen-xl;
+  }
 }
 
 .body {
