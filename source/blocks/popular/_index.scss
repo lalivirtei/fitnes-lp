@@ -1,10 +1,22 @@
 .popular {
 
+  padding-left: 15px;
+  padding-right: 15px;
+
   &__header-wrapper {
+    margin-bottom: 25px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 50px;
+    flex-direction: column;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 50px;
+    }
   }
 
   &__header {
@@ -12,7 +24,9 @@
     font-size: 35px;
     line-height: 129%;
     letter-spacing: 0.3px;
-    color: #FFFFFF;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 
   &__more {
@@ -21,15 +35,22 @@
     line-height: 1;
     text-decoration: none;
     letter-spacing: 1.5px;
+    color: #ababab;
     opacity: 0.67;
+    text-align: right;
   }
-  
+
   &__elements {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-column-gap: 40px;
-    grid-row-gap: 80px;
+    grid-gap: 40px 0;
+    justify-items: center;
+
+    @media (min-width: $screen-md) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 40px;
+      grid-row-gap: 80px;
+    }
   }
 
 }

@@ -1,5 +1,7 @@
 .exercise {
   max-width: 373px;
+  color: var(--white);
+  text-decoration: none;
 
   &__wrapper {
     position: relative;
@@ -31,9 +33,13 @@
     left: 20px;
     margin: 0;
     font-weight: 600;
-    font-size: 50px;
+    font-size: 35px;
     line-height: 90%;
     letter-spacing: 0.3px;
+
+    @media (min-width: $screen-md) {
+      font-size: 50px;
+    }
   }
 
   &__time {

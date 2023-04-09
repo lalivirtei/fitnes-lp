@@ -1,1 +1,3 @@
-// import menu from 'blocks/menu/index';
+import { Fancybox } from "@fancyapps/ui";
+
+Fancybox.bind("[data-fancybox]", {});

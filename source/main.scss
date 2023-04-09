@@ -1,10 +1,12 @@
 @import "node_modules/normalize.css/normalize";
+@import "node_modules/@fancyapps/ui/dist/fancybox/fancybox";
 @import "vars";
 @import "blocks";
 
 :root {
   --black: #000;
   --white: #fff;
+  --grey-50: #ababab;
   --grey-100: #666;
   --grey-200: #191919;
   --yellow-100: #ffe642;
