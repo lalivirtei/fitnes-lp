@@ -3,9 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 130px;
   padding: 25px 15px;
   overflow: hidden;
+  margin-bottom: 10px;
 
   &__logo {
     font-weight: 600;
@@ -13,5 +13,13 @@
     text-transform: uppercase;
     line-height: 22px;
     letter-spacing: 1px;
+  }
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 130px;
   }
 }

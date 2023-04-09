@@ -19,20 +19,21 @@ div, header, main, aside, a, span {
 
 .container {
   @media (min-width: $screen-sm) {
-    width: $screen-sm;
-    margin: 0 auto;
+    max-width: $screen-sm;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (min-width: $screen-md) {
-    width: $screen-md;
+    max-width: $screen-md;
   }
 
   @media (min-width: $screen-lg) {
-    width: $screen-lg;
+    max-width: $screen-lg;
   }
 
   @media (min-width: $screen-xl) {
-    width: $screen-xl;
+    max-width: $screen-xl;
   }
 }
 

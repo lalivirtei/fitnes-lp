@@ -1,4 +1,8 @@
 .hero {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 50px;
+  overflow: hidden;
 
   &__new {
     position: relative;
@@ -6,9 +10,9 @@
     align-items: center;
     background: var(--grey-200);
     border-radius: 200px;
-    padding: 5px;
+    padding: 5px 15px 5px 5px;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 18px;
     letter-spacing: 0.5px;
 
@@ -17,41 +21,93 @@
       position: relative;
       display: block;
       border-radius: 200px;
-      margin-right: 15px;
+      margin-right: 5px;
       padding: 4px 10px;
       text-transform: uppercase;
       background: var(--green-100);
+    }
+
+    @media (min-width: $screen-sm) {
+      font-size: 12px;
+
+      &::before {
+        margin-right: 15px;
+      }
     }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: $screen-sm) {
+      flex-direction: row;
+    }
   }
 
   &__left {
-    flex-basis: 70%;
+    flex-basis: 60%;
+    position: relative;
+    z-index: 1;
   }
 
   &__right {
-    padding-top: 132px;
+    position: relative;
+    margin-top: -100px;
     display: flex;
     flex-direction: column;
-    flex-basis: 30%;
+    flex-basis: 40%;
+
+    @media (min-width: $screen-sm) {
+      margin-top: 0;
+      padding-top: 86px;
+    }
   }
 
   &__header {
     font-weight: 600;
-    font-size: 200px;
+    font-size: 62px;
     line-height: 85%;
     letter-spacing: -2px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-sm) {
+      margin-top: 31px;
+      margin-bottom: 42px;
+      font-size: 86px;
+      margin-left: -5px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 126px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 146px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 200px;
+    }
   }
 
   &__description {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 181%;
     letter-spacing: 0.5px;
     opacity: 0.5;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $screen-lg) {
+      max-width: 500px;
+      font-size: 16px;
+    }
   }
 
   &__buttons .button:first-child {
@@ -59,34 +115,106 @@
   }
 
   &__bg {
+    @media (min-width: $screen-sm) {
+      width: 450px;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      z-index: -1;
+    }
 
+    @media (min-width: $screen-md) {
+      top: -15px;
+      right: -50px;
+      width: 550px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 650px;
+    }
+
+    @media (min-width: $screen-xl) {
+      top: -35px;
+      right: -65px;
+      width: 750px;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    width: 400px;
+
+    @media (min-width: $screen-sm) {
+      width: auto;
+    }
+  }
+
+  &__info-wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-top: -100px;
+
+    @media (min-width: $screen-sm) {
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: 0;
+    }
   }
 
   &__info {
     display: inline-flex;
     flex-direction: column;
-    padding: 20px 30px;
+    padding: 15px 25px;
     border-radius: 20px;
     background: var(--grey-200);
 
     &:first-child {
-      color: var(--yellow-100);
       margin-bottom: 20px;
+      margin-right: 20px;
+    }
+
+    &--time .hero__info-digit {
+      color: var(--yellow-100);
+    }
+
+    &--calories .hero__info-digit {
+      color: var(--pink-100);
+    }
+
+    @media (min-width: $screen-sm) {
+      width: 166px;
+      padding: 20px 30px;
+
+      &:first-child {
+        margin-right: 0;
+      }
     }
   }
 
   &__info-digit {
+    display: inline-flex;
+    margin-bottom: 5px;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 28px;
     line-height: 100%;
     letter-spacing: 1px;
+
+    @media (min-width: $screen-sm) {
+      font-size: 40px;
+    }
   }
 
+
   &__info-text {
+    display: inline-flex;
     font-size: 13px;
     line-height: 100%;
     letter-spacing: 1px;
+    text-transform: uppercase;
   }
 
+  @media (min-width: $screen-sm) {
+    padding-bottom: 150px;
+  }
 
 }

@@ -11,6 +11,7 @@
   padding: 135px 35px;
   background: var(--yellow-200);
   transition: all ease-in-out .2s;
+  z-index: 9;
 
   &--open {
     right: 0;

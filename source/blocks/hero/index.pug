@@ -1,19 +1,20 @@
-section.hero
+section.hero.container
     .hero__new High Intensity workout to burn calories
     .hero__inner
         .hero__left
-            h1.hero__header Cardio Exercise
-            .hero__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            h1.hero__header Cardio<br>Exercise
+            .hero__description Getting your heart pumping at faster rates on a regular basis. We have just great exercises that fit almost anyone!
             .hero__buttons
                 a.button.button--main(href="#") Get started
                 a.button(href="#") Preview
         .hero__right
             picture.hero__bg
                 source(srcset="images/hero__bg.png")
-                img(src="images/hero__bg.png" alt="Woman doing dropouts")
-            .hero__info.hero__info--time
-                .hero__info-digit 38:14
-                .hero__info-text time
-            .hero__info.hero__info--calories
-                .hero__info-digit 165
-                .hero__info-text Est calories
+                img.hero__img(src="images/hero__bg.png" alt="Woman doing dropouts")
+            .hero__info-wrapper
+                .hero__info.hero__info--time
+                    .hero__info-digit 38:14
+                    .hero__info-text time
+                .hero__info.hero__info--calories
+                    .hero__info-digit 165
+                    .hero__info-text Est calories

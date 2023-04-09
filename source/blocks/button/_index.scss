@@ -2,10 +2,10 @@
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 61px;
+  padding: 12px 30px;
   border-radius: 10px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 22px;
   letter-spacing: 1px;
   text-decoration: none;
@@ -14,5 +14,15 @@
 
   &--main {
     background-color: var(--green-100);
+  }
+
+  @media (min-width: $screen-md) {
+    padding: 20px 45px;
+    font-size: 16px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 24px 61px;
+    font-size: 18px;
   }
 }
