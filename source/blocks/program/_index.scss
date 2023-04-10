@@ -1,63 +1,165 @@
 .program {
 
-  &__top-wrapper {
-    display: flex;
-    position: relative;
-    max-width: 100vw;
-    overflow: hidden;
+  overflow: hidden;
 
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 321px;
-      width: 100%;
-      height: 100%;
-      background: var(--white);
-      opacity: 0.1;
+  &__top-wrapper {
+    position: relative;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 245px;
+        width: 100vw;
+        height: 100%;
+        background: var(--white);
+        opacity: 0.1;
+      }
     }
+
+    @media (min-width: $screen-lg) {
+      &::after {
+        left: 275px;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      &::after {
+        left: 335px;
+      }
+    }
+
   }
 
   &__left {
     flex-basis: 60%;
-    padding: 100px;
+    margin-bottom: 100px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 50px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 70px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 100px;
+    }
   }
 
   &__right {
-    padding: 130px 0 233px;
+    padding: 50px 15px 50px;
+    margin-bottom: 50px;
+    background: var(--grey-alpha-1);
+
+    @media (min-width: $screen-md) {
+      padding-top: 65px;
+      padding-left: 50px;
+      padding-bottom: 100px;
+      background: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 90px;
+      padding-left: 65px;
+      padding-bottom: 170px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 130px 15px 233px 100px;
+    }
   }
 
   &__header {
     position: relative;
     margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
     font-weight: 600;
-    font-size: 120px;
+    font-size: 66px;
     line-height: 100%;
     letter-spacing: -2px;
     color: #fff;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
-      bottom: -97px;
-      left: -30px;
+      z-index: -1;
+      bottom: -40px;
+      left: 0;
       display: block;
+      height: 85px;
+      width: 300px;
       max-width: 100%;
-      width: 251px;
-      height: 57px;
-      background: url("images/underline.svg") center center /contain no-repeat;
-      transform: rotate(-10deg);
+      background: url("images/underline.svg") center center /cover no-repeat;
+    }
+
+    @media (min-width: $screen-sm) {
+      font-size: 76px;
+
+      &::after {
+        width: 300px;
+        bottom: -45px;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 86px;
+
+      &::after {
+        width: 350px;
+        height: 100px;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 96px;
+
+      &::after {
+        bottom: -55px;
+        width: 400px;
+        height: 120px;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 120px;
+
+      &::after {
+        bottom: -75px;
+        left: -10px;
+        width: 503px;
+        height: 150px;
+      }
     }
   }
 
   &__descr {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     font-weight: 400;
-    font-size: 25px;
-    line-height: 200%;
+    font-size: 20px;
+    line-height: 1.5;
     letter-spacing: 0.5px;
     opacity: 0.7;
+
+    @media (min-width: $screen-sm) {
+      line-height: 2;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 50px;
+      font-size: 25px;
+    }
   }
 
   &__trainers {
