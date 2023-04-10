@@ -111,6 +111,11 @@ function images() {
         .pipe(bs.stream());
 }
 
+function moveAssets() {
+    return src('./favicon/*')
+        .pipe(dest('public'));
+}
+
 function watcher() {
     watch("source/**/*.scss", {usePolling: true}, styles);
     watch("source/**/*.js", {usePolling: true}, scripts);
@@ -135,7 +140,7 @@ exports.layout = layout;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
-exports.build = parallel(layout, styles, scripts, images);
+exports.build = parallel(layout, styles, scripts, images, moveAssets);
 exports.cb = createBlocks;
 
 exports.browserSync = browserSync;
