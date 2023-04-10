@@ -1,6 +1,35 @@
 .trainer {
-
+  position: relative;
   margin-bottom: 30px;
+
+  &--big {
+    @media (min-width: $screen-md) {
+
+      .trainer__img {
+        width: 278px;
+        height: 278px;
+      }
+
+      .trainer__name,
+      .trainer__job-title {
+        padding-left: 20px;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      .trainer__img {
+        width: 442px;
+        height: 442px;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      .trainer__img {
+        width: 530px;
+        height: 530px;
+      }
+    }
+  }
 
   &__img {
     width: 280px;
@@ -8,6 +37,26 @@
     display: block;
     margin-bottom: 20px;
     object-fit: cover;
+
+    @media (min-width: $screen-sm) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 230px;
+      height: 230px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 260px;
+      height: 260px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 320px;
+      height: 320px;
+    }
   }
 
   &__name {

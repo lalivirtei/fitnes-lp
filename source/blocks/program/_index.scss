@@ -1,6 +1,7 @@
 .program {
 
   overflow: hidden;
+  margin-bottom: 50px;
 
   &__top-wrapper {
     position: relative;
@@ -59,19 +60,19 @@
 
     @media (min-width: $screen-md) {
       padding-top: 65px;
-      padding-left: 50px;
+      padding-left: 75px;
       padding-bottom: 100px;
       background: none;
     }
 
     @media (min-width: $screen-lg) {
       padding-top: 90px;
-      padding-left: 65px;
-      padding-bottom: 170px;
+      padding-left: 90px;
+      padding-bottom: 230px;
     }
 
     @media (min-width: $screen-xl) {
-      padding: 130px 15px 233px 100px;
+      padding: 130px 15px 263px 100px;
     }
   }
 
@@ -163,6 +164,66 @@
   }
 
   &__trainers {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
 
+    .trainer {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: $screen-sm) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $screen-md) {
+      min-height: 530px;
+      justify-content: flex-start;
+
+      .trainer {
+        margin-left: 0;
+        margin-right: 0;
+
+        &--big {
+          top: -48px;
+        }
+
+        &:nth-child(2) {
+          position: relative;
+          top: 230px;
+        }
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      min-height: 590px;
+
+      .trainer {
+        &--big {
+          top: -182px;
+        }
+
+        &:nth-child(2) {
+          top: 260px;
+        }
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      min-height: 710px;
+
+      .trainer {
+        &--big {
+          top: -210px;
+        }
+
+        &:nth-child(2) {
+          top: 320px;
+        }
+      }
+    }
   }
 }
