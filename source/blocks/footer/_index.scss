@@ -4,40 +4,49 @@
 
   &__item {
     position: relative;
+    padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
     align-items: center;
     text-decoration: none;
+    transition: var(--transition-text);
 
     &:not(:last-child) {
       border-bottom: 0.5px solid var(--grey-alpha-4);
-      margin-bottom: 20px;
+    }
+
+    &:hover {
+      background: var(--grey-alpha-1);
+
+      .footer__num {
+        transform: translateX(20px);
+      }
+
+      .footer__title {
+        color: var(--yellow-100);
+      }
+
+      .footer__arrow {
+        transform: translateX(-50px) scale(1.5);
+      }
     }
 
     @media (min-width: $screen-sm) {
+      padding-top: 30px;
       padding-bottom: 30px;
-
-      &:not(:last-child) {
-        margin-bottom: 30px;
-      }
     }
     @media (min-width: $screen-lg) {
+      padding-top: 40px;
       padding-bottom: 40px;
-
-      &:not(:last-child) {
-        margin-bottom: 40px;
-      }
     }
     @media (min-width: $screen-xl) {
+      padding-top: 50px;
       padding-bottom: 50px;
-
-      &:not(:last-child) {
-        margin-bottom: 50px;
-      }
     }
   }
 
   &__num {
+    position: relative;
     flex: 0 1 20%;
     font-weight: 600;
     font-size: 20px;
@@ -45,6 +54,7 @@
     color: #fff;
     mix-blend-mode: normal;
     opacity: 0.34;
+    transition: var(--transition-text);
 
     @media (min-width: $screen-md) {
       flex-basis: 27.5%;
@@ -106,6 +116,7 @@
     width: 20px;
     height: 25px;
     background: url("images/arrow.svg") center center /contain no-repeat;
+    transition: var(--transition-text);
   }
 
   @media (min-width: $screen-sm) {

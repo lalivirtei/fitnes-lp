@@ -53,12 +53,17 @@
     color: var(--black);
     text-decoration: none;
     margin-bottom: 25px;
+    transition: var(--transition-text);
 
     @media (min-width: $screen-sm) {
       margin-bottom: 0;
       font-size: 12px;
-      opacity: .67;
       color: inherit;
+      opacity: .67;
+
+      &:hover {
+        opacity: 1;
+      }
 
       &:not(:last-child) {
         margin-right: 25px;

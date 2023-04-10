@@ -10,7 +10,12 @@
   letter-spacing: 1px;
   text-decoration: none;
   background: var(--grey-200);
-  color: #fff;
+  color: var(--white);
+  transition: var(--transition-text);
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 
   &--main {
     background-color: var(--green-100);

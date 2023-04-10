@@ -2,6 +2,15 @@
   max-width: 373px;
   color: var(--white);
   text-decoration: none;
+  transition: all ease-in-out .2s;
+
+  &:hover {
+    filter: contrast(130%);
+
+    .exercise__name {
+      color: var(--yellow-100);
+    }
+  }
 
   &__wrapper {
     position: relative;
@@ -36,6 +45,7 @@
     font-size: 35px;
     line-height: 90%;
     letter-spacing: 0.3px;
+    transition: var(--transition-text);
 
     @media (min-width: $screen-sm) {
       font-size: 30px;

@@ -40,6 +40,11 @@
     opacity: 0.67;
     text-align: right;
     text-transform: uppercase;
+    transition: var(--transition-text);
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &__elements {
